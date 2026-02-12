@@ -198,7 +198,7 @@ useEffect(() => {
     alert("Error al actualizar la empresa");
   }
 };
-
+// comentario
 const handleUpdate = async () => {
   try {
     await editESchema.validate(editForm, { abortEarly: false });
