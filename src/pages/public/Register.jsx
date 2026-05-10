@@ -101,7 +101,13 @@ export default function Register() {
         confirmPassword: ""
       });
 
-      setTimeout(() => navigate("/login"), 1500);
+      // Éxito
+      navigate("/verificar", {
+        state: {
+          correo: formData.correo,
+          nombreCompleto: formData.nombreCompleto
+        }
+      });
 
     } catch (error) {
       if (error.inner) {

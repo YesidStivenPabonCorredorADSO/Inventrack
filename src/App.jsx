@@ -11,6 +11,7 @@ import CatalogoEmpresa from "./pages/private/CatologoEmpresa";
 import GestioCostos from "./pages/private/GestioCostos";
 import { AuthProvider } from "./context/AuthProvider";
 import ProtectedRoute from "./routes/ProtectedRoute";
+import Verifycode from "./pages/public/VerifyCode";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           </Route>
 
           <Route path="/login" element={<LoginPages />} />
+          <Route path="/verificar" element={<Verifycode/>} />
           <Route path="/register" element={<Register/>}/>
 
           {/* Rutas privadas */}
@@ -41,7 +43,6 @@ function App() {
             {/* Rutas para cuando es usuario */}
             <Route path="/dashboard/gestion-costos" element={<GestioCostos />} />
             <Route path="/dashboard/inventario" element={<Inventario/>}/>
-            
           </Route>
 
         </Routes>
